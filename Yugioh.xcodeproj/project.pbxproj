@@ -13,6 +13,8 @@
 		9C700107250F782100FB88AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C700106250F782100FB88AE /* Assets.xcassets */; };
 		9C70010A250F782100FB88AE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C700109250F782100FB88AE /* Preview Assets.xcassets */; };
 		9C70010D250F782100FB88AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C70010B250F782100FB88AE /* LaunchScreen.storyboard */; };
+		9C700115250F78F700FB88AE /* YGOfetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C700114250F78F700FB88AE /* YGOfetcher.swift */; };
+		9C700117250F958000FB88AE /* DuelistView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C700116250F958000FB88AE /* DuelistView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		9C700109250F782100FB88AE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C70010C250F782100FB88AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C70010E250F782100FB88AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C700114250F78F700FB88AE /* YGOfetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YGOfetcher.swift; sourceTree = "<group>"; };
+		9C700116250F958000FB88AE /* DuelistView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DuelistView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				9C70010B250F782100FB88AE /* LaunchScreen.storyboard */,
 				9C70010E250F782100FB88AE /* Info.plist */,
 				9C700108250F782100FB88AE /* Preview Content */,
+				9C700114250F78F700FB88AE /* YGOfetcher.swift */,
+				9C700116250F958000FB88AE /* DuelistView.swift */,
 			);
 			path = Yugioh;
 			sourceTree = "<group>";
@@ -149,6 +155,8 @@
 				9C700101250F781E00FB88AE /* AppDelegate.swift in Sources */,
 				9C700103250F781E00FB88AE /* SceneDelegate.swift in Sources */,
 				9C700105250F781E00FB88AE /* ContentView.swift in Sources */,
+				9C700115250F78F700FB88AE /* YGOfetcher.swift in Sources */,
+				9C700117250F958000FB88AE /* DuelistView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
