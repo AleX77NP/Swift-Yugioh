@@ -11,11 +11,14 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var fetcher = DuelistFetcher()
+    @State var favorites = [Duelist]()
+    @State var isOn: Bool = false
     
     var body: some View {
         NavigationView{
         List {
-            ForEach(fetcher.duelists) {
+            Toggle("Hide duelists",isOn: $isOn)
+            ForEach(!isOn ? fetcher.duelists : favorites) {
                 duelist in
                 NavigationLink(destination: DuelistView(duelist: duelist)) {
             HStack{
@@ -35,6 +38,9 @@ struct ContentView: View {
     }
   }
  }
+    func isFavorite(duelist: Duelist) -> Bool {
+        return self.favorites.contains(duelist) ? true : false
+    }
 }
 
 struct ContentView_Previews: PreviewProvider {

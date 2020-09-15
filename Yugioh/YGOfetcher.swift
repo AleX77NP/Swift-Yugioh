@@ -9,7 +9,7 @@
 import Foundation
 import SwiftUI
 
-struct Duelist: Identifiable, Decodable {
+struct Duelist: Identifiable, Decodable, Equatable {
     let id: Int
     let name: String
     let age: Int
