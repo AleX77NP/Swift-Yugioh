@@ -22,6 +22,8 @@ struct Duelist: Identifiable, Decodable, Equatable {
 class DuelistFetcher: ObservableObject {
     
     @Published var duelists = [Duelist]()
+    @Published var favorites = [Duelist]()
+    @Published var loaded = false
 
     init() {
         fetchAll()
@@ -34,7 +36,10 @@ class DuelistFetcher: ObservableObject {
             do {
                 let tempData = try JSONDecoder().self.decode([Duelist].self, from: data!)
                 DispatchQueue.main.async {
+                    sleep(1)
                     self.duelists = tempData
+                    self.favorites = tempData.filter {$0.id < 4}
+                    self.loaded = true
                   //  print(self.duelists)
                 }
             }

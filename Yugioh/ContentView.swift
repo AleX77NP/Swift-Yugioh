@@ -11,14 +11,14 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var fetcher = DuelistFetcher()
-    @State var favorites = [Duelist]()
     @State var isOn: Bool = false
     
     var body: some View {
+        if(fetcher.loaded) {
         NavigationView{
         List {
-            Toggle("Hide duelists",isOn: $isOn)
-            ForEach(!isOn ? fetcher.duelists : favorites) {
+            Toggle("Only favorites",isOn: $isOn)
+            ForEach(!isOn ? fetcher.duelists : fetcher.favorites) {
                 duelist in
                 NavigationLink(destination: DuelistView(duelist: duelist)) {
             HStack{
@@ -34,13 +34,33 @@ struct ContentView: View {
                 }
             }
         }
-      }.navigationBarTitle(Text("Duelists"))
-    }
+      }
+    }.navigationBarTitle(Text("Duelists"))
   }
+        } else {
+            LoadingView()
+        }
  }
-    func isFavorite(duelist: Duelist) -> Bool {
-        return self.favorites.contains(duelist) ? true : false
+}
+
+struct LoadingView: View {
+    @State var animate = false
+    var body: some View {
+        VStack {
+        Circle()
+            .trim(from: 0, to: 0.8)
+            .stroke(AngularGradient(gradient: .init(colors: [.blue,.red]),
+                                    center: .center),style: StrokeStyle(lineWidth: 8, lineCap: .round))
+            .rotationEffect(.degrees(self.animate ? 360.0 : 0.0))
+            .animation(self.animate ? Animation.linear(duration:
+                1.0).repeatForever(autoreverses: false) : .default)
+            .frame(width: 50, height: 50)
     }
+        .onAppear {
+            self.animate.toggle()
+        }
+        
+  }
 }
 
 struct ContentView_Previews: PreviewProvider {
