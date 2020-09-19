@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C037158251667F00085FE55 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C037157251667F00085FE55 /* ListItem.swift */; };
 		9C700101250F781E00FB88AE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C700100250F781E00FB88AE /* AppDelegate.swift */; };
 		9C700103250F781E00FB88AE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C700102250F781E00FB88AE /* SceneDelegate.swift */; };
 		9C700105250F781E00FB88AE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C700104250F781E00FB88AE /* ContentView.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C037157251667F00085FE55 /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		9C7000FD250F781E00FB88AE /* Yugioh.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yugioh.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C700100250F781E00FB88AE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9C700102250F781E00FB88AE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				9C700108250F782100FB88AE /* Preview Content */,
 				9C700114250F78F700FB88AE /* YGOfetcher.swift */,
 				9C700116250F958000FB88AE /* DuelistView.swift */,
+				9C037157251667F00085FE55 /* ListItem.swift */,
 			);
 			path = Yugioh;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C037158251667F00085FE55 /* ListItem.swift in Sources */,
 				9C700101250F781E00FB88AE /* AppDelegate.swift in Sources */,
 				9C700103250F781E00FB88AE /* SceneDelegate.swift in Sources */,
 				9C700105250F781E00FB88AE /* ContentView.swift in Sources */,
